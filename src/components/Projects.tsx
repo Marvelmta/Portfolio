@@ -9,7 +9,7 @@ const projects = [
   {
     id: 1,
     title: "The Movie Database",
-    description: "A comprehensive admin dashboard for managing products, orders, and analytics with real-time data visualization.",
+    description: "A dynamic web application written with JavaScript that integrates with the TMDB API to fetch and display film details. It includes filter functionality, allowing users to explore movies by popularity but also a search bar allowing users to search for their favorite movies or actors.",
     image: img1,
     tags: ["JavaScript"],
     liveUrl: "https://fe24-js1-slutprojekt-marcel-cios.netlify.app/",
@@ -18,7 +18,7 @@ const projects = [
   {
     id: 2,
     title: "Scrum Board",
-    description: "An intuitive interface for generating and editing AI-powered content with custom templates and real-time previews.",
+    description: "A task management tool modeled after Agile and Scrum practices. Users can create, update, and organize tasks across customizable boards, making project tracking more visual and efficient.",
     image: img2,
     tags: ["TypeScript", "Firebase"],
     liveUrl: "https://fe24-js2-slutprojekt-marcel-cios.netlify.app/",
@@ -27,7 +27,7 @@ const projects = [
   {
     id: 3,
     title: "Weather Application",
-    description: "Real-time collaborative drawing tool with multi-user support, shapes, and export functionality.",
+    description: "A responsive weather application with a sleek, modern design. It provides real-time weather updates and forecasts for any city, with a clean UI optimized for both desktop and mobile.",
     image: img3,
     tags: ["React", "TailwindCSS", "Node.js"],
     liveUrl: "https://weather-app-sage-chi-90.vercel.app/",
@@ -36,9 +36,9 @@ const projects = [
   {
     id: 4,
     title: "Currency Converter",
-    description: "Modern project management tool with kanban boards, time tracking, and team collaboration features.",
+    description: "A simple yet practical tool for converting between global currencies. It fetches live exchange rate data and instantly calculates conversions, offering a fast and intuitive user experience.",
     image: img4,
-    tags: ["TypeScript"],
+    tags: ["JavaScript"],
     githubUrl: "#",
   },
 ];
