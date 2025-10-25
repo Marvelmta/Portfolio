@@ -4,6 +4,8 @@ import img1 from './images/1.png';
 import img2 from './images/2.png';
 import img3 from './images/3.png';
 import img4 from './images/4.png';
+import img5 from './images/5.png';
+import { li } from "motion/react-client";
 
 const projects = [
   {
@@ -39,7 +41,17 @@ const projects = [
     description: "A simple yet practical tool for converting between global currencies. It fetches live exchange rate data and instantly calculates conversions, offering a fast and intuitive user experience.",
     image: img4,
     tags: ["JavaScript"],
+    liveUrl: "#",
     githubUrl: "#",
+  },
+  {
+    id: 5,
+    title: "Travel Explorer",
+    description: "A responsive web app that lets users explore countries around the world. It integrates multiples APIs - to display detailed country information, current weather, short country descriptions and stunning images. The app includes a searchable and filterable interface, pagination and responsive design for a smooth user experience.",
+    image: img5,
+    tags: ["React", "TailwindCSS"],
+    liveUrl: "https://travel-app-vert-tau.vercel.app/",
+    githubUrl: "https://github.com/Marvelmta/TravelApp",
   },
 ];
 
