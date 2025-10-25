@@ -47,7 +47,7 @@ const projects = [
   {
     id: 5,
     title: "Travel Explorer",
-    description: "A responsive web app that lets users explore countries around the world. It integrates multiples APIs - to display detailed country information, current weather, short country descriptions and stunning images. The app includes a searchable and filterable interface, pagination and responsive design for a smooth user experience.",
+    description: "A responsive web app that lets users explore countries around the world. It integrates multiples APIs. The app includes a searchable and filterable interface, pagination and responsive design for a smooth user experience.",
     image: img5,
     tags: ["React", "TailwindCSS"],
     liveUrl: "https://travel-app-vert-tau.vercel.app/",
