@@ -16,9 +16,31 @@ export function Navigation() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    const isDarkMode = document.documentElement.classList.contains('dark');
-    setIsDark(isDarkMode);
+    // Detect system/browser color scheme preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const html = document.documentElement;
+    if (prefersDark) {
+      html.classList.add('dark');
+      setIsDark(true);
+    } else {
+      html.classList.remove('dark');
+      setIsDark(false);
+    }
 
+    // Listen for changes in system color scheme
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        html.classList.add('dark');
+        setIsDark(true);
+      } else {
+        html.classList.remove('dark');
+        setIsDark(false);
+      }
+    };
+    mediaQuery.addEventListener('change', handleChange);
+
+    // Section scroll logic
     const handleScroll = () => {
       const sections = navItems.map(item => item.href.substring(1));
       const currentSection = sections.find(section => {
@@ -33,9 +55,12 @@ export function Navigation() {
         setActiveSection(currentSection);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      mediaQuery.removeEventListener('change', handleChange);
+    };
   }, []);
 
   const toggleDarkMode = () => {
