@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React, showcasing projects, skills, and experience with a clean and professional design.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **React** - A JavaScript library for building user interfaces
 - **Vite** - Next generation frontend tooling for fast development
@@ -11,16 +11,16 @@ A modern, responsive portfolio website built with React, showcasing projects, sk
 - **shadcn/ui** - Beautifully designed components built with Radix UI and Tailwind CSS
 - **Framer Motion** - Production-ready motion library for React 
 
-## ✨ Features
+## Features
 
-- 🎨 **Modern Design** - Clean, professional, and responsive layout
-- 🌙 **Dark/Light Mode** - Toggle between themes with shadcn/ui
-- 📱 **Mobile Responsive** - Optimized for all device sizes
-- ⚡ **Fast Performance** - Built with Vite for optimal loading speeds
-- 📧 **Contact Form** - Functional contact form with validation
-- 🔧 **Component-Based** - Reusable UI components with shadcn/ui
+- **Modern Design** - Clean, professional, and responsive layout
+- **Dark/Light Mode** - Toggle between themes with shadcn/ui
+- **Mobile Responsive** - Optimized for all device sizes
+- **Fast Performance** - Built with Vite for optimal loading speeds
+- **Contact Form** - Functional contact form with validation
+- **Component-Based** - Reusable UI components with shadcn/ui
 
-## 📱 Sections
+## Sections
 
 The portfolio includes the following sections:
 
