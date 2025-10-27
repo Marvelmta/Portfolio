@@ -16,7 +16,6 @@ export function Navigation() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Detect system/browser color scheme preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const html = document.documentElement;
     if (prefersDark) {
@@ -27,7 +26,6 @@ export function Navigation() {
       setIsDark(false);
     }
 
-    // Listen for changes in system color scheme
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const handleChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
@@ -40,7 +38,6 @@ export function Navigation() {
     };
     mediaQuery.addEventListener('change', handleChange);
 
-    // Section scroll logic
     const handleScroll = () => {
       const sections = navItems.map(item => item.href.substring(1));
       const currentSection = sections.find(section => {
