@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { GraduationCap, Code } from "lucide-react";
+import { GraduationCap, Code, Briefcase, Braces} from "lucide-react";
 
 const education = [
   {
@@ -7,6 +7,15 @@ const education = [
     institution: "Vocational University",
     period: "2024 - 2026",
     description: "Comprehensive program covering modern frontend technologies, UI/UX principles, and project-based learning."
+  },
+];
+
+const experience = [
+  {
+    degree: "IMVI Labs AB",
+    institution: "Internship - Frontend Developer",
+    period: "2025 - 2026",
+    description: "Internship at IMVI Labs AB focusing on frontend development tasks, collaborating with the development team to build user interfaces and enhance user experience.",
   },
 ];
 
@@ -37,9 +46,6 @@ export function About() {
         </motion.div>
 
         {/* Experience Section */}
-
-
-        {/* Education Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,7 +54,51 @@ export function About() {
         >
           <div className="flex items-center gap-3 mb-10">
             <div className="w-12 h-12 bg-blue-600/10 rounded-full flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            </div>
+            <h3 className="text-3xl">Experience</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {experience.map((edu, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="w-10 h-10 bg-blue-600/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Braces className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg mb-1">{edu.degree}</h4>
+                    <p className="text-blue-600 dark:text-blue-400 text-sm">{edu.institution}</p>
+                  </div>
+                </div>
+                
+                <p className="text-sm text-muted-foreground mb-3">{edu.period}</p>
+                <p className="text-sm text-muted-foreground">{edu.description}</p>
+              </motion.div>
+            ))}
+          </div>
+          <br />
+        </motion.div>
+
+
+        {/* Education Section */}
+        <br />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex items-center gap-3 mb-10">
+            <div className="w-12 h-12 bg-green-600/10 rounded-full flex items-center justify-center">
+              <GraduationCap className="w-6 h-6 text-green-600 dark:text-green-400" />
             </div>
             <h3 className="text-3xl">Education</h3>
           </div>
@@ -64,12 +114,12 @@ export function About() {
                 className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow"
               >
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 bg-blue-600/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Code className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <div className="w-10 h-10 bg-green-600/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Code className="w-5 h-5 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
                     <h4 className="text-lg mb-1">{edu.degree}</h4>
-                    <p className="text-blue-600 dark:text-blue-400 text-sm">{edu.institution}</p>
+                    <p className="text-green-600 dark:text-green-400 text-sm">{edu.institution}</p>
                   </div>
                 </div>
                 
