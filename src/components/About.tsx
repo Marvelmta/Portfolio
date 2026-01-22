@@ -13,7 +13,7 @@ const education = [
 const experience = [
   {
     degree: "IMVI Labs AB",
-    institution: "Internship - Frontend Developer",
+    institution: "Internship",
     period: "2025 - 2026",
     description: "Internship at IMVI Labs AB focusing on frontend development tasks, collaborating with the development team to build user interfaces and enhance user experience.",
   },
